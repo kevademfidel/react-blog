@@ -1,3 +1,3 @@
 # react-blog
 
-MERN fullstack project
+MERN fullstack project (WIP)
