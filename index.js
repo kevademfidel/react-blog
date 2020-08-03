@@ -8,8 +8,10 @@ const {
   User
 } = require('./model/user');
 
+const uri = 'mongodb+srv://KevFidel:rmpylk62nq@react-blog.yuxgh.mongodb.net/test?retryWrites=true&w=majority' // db location
+
 mongoose
-  .connect('mongodb+srv://KevFidel:rmpylk62nq@react-blog.yuxgh.mongodb.net/test?retryWrites=true&w=majority', {
+  .connect(uri, {
     useNewUrlParser: true,
     useUnifiedTopology: true // added due to deprecation message
   })
