@@ -80,4 +80,14 @@ app.post('/api/user/login', (req, res) => {
   });
 });
 
+app.post('/api/user/logout', auth, (req, res) => {
+  User.findOneAndUpdate({ _id: req.user._id }, { token: '' }, (err, data) => {
+    if (err) return res.json({ success: false, error: err });
+
+    return res.status(200).send({
+      sucess: true
+    });
+  });
+});
+
 app.listen(5000);
