@@ -7,6 +7,8 @@ const config = require('./config/key');
 const { User } = require('./model/user');
 const { auth } = require('./middleware/auth');
 
+const port = process.env.PORT || 5000;
+
 mongoose
   .connect(config.mongoURI, {
     useNewUrlParser: true,
@@ -90,4 +92,6 @@ app.post('/api/user/logout', auth, (req, res) => {
   });
 });
 
-app.listen(5000);
+app.listen(port, () => {
+  console.log(`Server Running at ${port}`);
+});

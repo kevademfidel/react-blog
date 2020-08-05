@@ -3,9 +3,13 @@
   "version": "1.0.0",
   "description": "boiler plate",
   "main": "index.js",
+  "engine": {
+    "node": "12.18.1",
+    "npm": "6.14.5"
+  },
   "scripts": {
-    "start": "node index.js",
-    "backend": "nodemon index.js"
+    "start": "node server/index.js",
+    "backend": "nodemon server/index.js"
   },
   "author": "Kevien Fidel",
   "license": "ISC",
